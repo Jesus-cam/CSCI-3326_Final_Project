@@ -2,18 +2,18 @@ package warehouse;
 
 
 // I made this class encapsuted
-// so no can access the buyers information
+// so no one can access the buyers information
 
 public class BuyersInfo{
-    private String name;
+    private String Bname;
     private int cardNumber;
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String Bname) {
+        this.Bname = Bname;
     }
 
     public String getName() {
-        return name;
+        return Bname;
     }
 
     public void setNumber(int CardNumber) {

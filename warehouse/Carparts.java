@@ -1,19 +1,19 @@
 package warehouse;
 
 public abstract class Carparts {
-    private String name;
+    public String name;
     // when we input the name in the class
     // it would like mudtires, small battery or, truck engine, sport car engine, etc.
 
-    private double price;
+    public double price;
     public String model;
     public int year;
 
-    public void setName(String name) {
+    public Carparts(String name, double price,  int year, String model) {
         this.name = name;
-    }
-    public String getName() {
-        return name;
+        this.price = price;
+        this.year = year;
+        this.model = model;
     }
 
     // Price of the part
@@ -25,13 +25,7 @@ public abstract class Carparts {
 
     // when we are going to input the original price
     // which is going to decrease over time.
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
-    public double getPrice() {
-        return price;
-    }
 
     public abstract void partInfor();
 
