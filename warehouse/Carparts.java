@@ -1,4 +1,4 @@
-package Warehouse;
+package warehouse;
 
 public abstract class Carparts {
     private String name;
@@ -34,4 +34,6 @@ public abstract class Carparts {
     }
 
     public abstract void partInfor();
+
+    
 }
