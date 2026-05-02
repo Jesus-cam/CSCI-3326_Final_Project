@@ -2,6 +2,9 @@ package warehouse;
 
 public class Tires extends Carparts{
 
+
+    // for the name of the tire we are going to use
+    // mudtire, snowtire, normal tire and sports tire
     public Tires(String name, double price, int year, String model) {
         super(name,price,year,model);
     }
