@@ -9,6 +9,8 @@ public class Tires extends Carparts{
         super(name,price,year,model);
     }
 
+    public void updated_price(price);
+
     // it will print out the information
     public void partInfor() {
         System.out.println("Name: " + name);

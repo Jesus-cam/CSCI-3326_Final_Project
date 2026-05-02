@@ -10,12 +10,16 @@ public class Main {
 
         System.out.println(tire1.name);
         tire1.partInfor();
+        System.out.println();
 
         Battery bat1 = new Battery("small", 107, 2017, "ford");
         bat1.partInfor();
+        System.out.println();
 
+        System.out.println();
         Engine eng1 = new Engine("V8", 2000, 2017, "ford");
         eng1.partInfor();
+        System.out.println();
 
     }
 }
