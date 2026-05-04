@@ -8,7 +8,7 @@ public class Battery extends Carparts{
 
     public void partInfor() {
         System.out.println("Name: " + name);
-        System.out.println("Price: "+ price);
+        System.out.printf("Price: %.2f\n", updated_price());
         System.out.println("year: " + year);
         System.out.println("Model: " + model);
     }

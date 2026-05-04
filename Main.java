@@ -21,5 +21,9 @@ public class Main {
         eng1.partInfor();
         System.out.println();
 
+        
+    
+        
+
     }
 }
