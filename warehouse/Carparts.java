@@ -9,6 +9,7 @@ public abstract class Carparts {
     public String model;
     public int year;
 
+
     public Carparts(String name, double price,  int year, String model) {
         this.name = name;
         this.price = price;
@@ -23,6 +24,15 @@ public abstract class Carparts {
             price = price * .90;
         }
         return price;
+    }
+
+    private BuyersInfo buyer;
+
+    public void setBuyer(BuyersInfo buyer) {
+        this.buyer = buyer;
+    }
+    public BuyersInfo getBuyer() {
+        return buyer;
     }
 
     // Price of the part

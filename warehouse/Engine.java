@@ -27,5 +27,12 @@ public class Engine extends Carparts {
         System.out.printf("Price: %.2f\n", updated_price());
         System.out.println("year: " + year);
         System.out.println("Model: " + model);
+
+        if (getBuyer() != null) {
+            System.out.println("Buyer: " + getBuyer().getName());
+        } 
+        else {
+            System.out.println("Buyer: No buyer assigned");
+        }
     }
 }

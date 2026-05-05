@@ -8,6 +8,13 @@ public class Main {
 
         Tires tire1 = new Tires("mudtire", 40.3, 2020, "ford");
 
+        BuyersInfo b = new BuyersInfo();
+        b.setName("jesus");
+        b.setNumber(123453);
+
+        tire1.setBuyer(b);
+        tire1.getBuyer();
+
         System.out.println(tire1.name);
         tire1.partInfor();
         System.out.println();
@@ -22,8 +29,7 @@ public class Main {
         System.out.println();
 
         
-    
-        
+
 
     }
 }
