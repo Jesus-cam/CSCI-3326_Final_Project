@@ -12,13 +12,14 @@ public class Battery extends Carparts{
     public double updated_price() {
         int current_year = 2026;
         int yearsPassed = current_year - year;
-        
-        for(int index = 0; index <= yearsPassed; index++) {
-            price = price * .85;
+        double updatedPrice = price;
+    
+        for(int index = 0; index < yearsPassed; index++) {
+          updatedPrice = updatedPrice * .85;
         }
 
-        return price;
-    }
+        return updatedPrice;
+  }
 
 
 
