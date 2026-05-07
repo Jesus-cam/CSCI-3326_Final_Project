@@ -9,18 +9,20 @@ public class Engine extends Carparts {
     public double updated_price() {
         int current_year = 2026;
         int yearsPassed = current_year - year;
-        
-        for(int index = 0; index <= yearsPassed; index++) {
-            price = price * .90;
+        double updatedPrice = price;
+    
+        for(int index = 0; index < yearsPassed; index++) {
+            updatedPrice = updatedPrice * .90;
         }
 
-        if(year <= 1970) {
-            for(int index = 0; index <= yearsPassed; index++) {
-                price = price + (price * 0.10);
+        if(year >= 1970) {
+            for(int index = 0; index < yearsPassed; index++) {
+            updatedPrice = updatedPrice + (updatedPrice * 0.10);
             }
         }
-        return price;
-    }
+
+        return updatedPrice;
+}
 
     public void partInfor() {
         System.out.println("Type: Engine");
