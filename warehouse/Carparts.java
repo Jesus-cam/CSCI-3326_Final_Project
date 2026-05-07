@@ -9,7 +9,7 @@ public abstract class Carparts {
     public String model;
     public int year;
 
-
+    //Constructor 
     public Carparts(String name, double price,  int year, String model) {
         this.name = name;
         this.price = price;
@@ -39,7 +39,7 @@ public abstract class Carparts {
     // I want to make a class specifically for the price of the part
     // I want to make it so the older the year of the part, the cheaper it is
     // but for the engine, if it passes certain years, it becomes more expensive
-    // because it allready stoped being manufactured and it is more rare.
+    // because it already stopped being manufactured and it is more rare.
 
 
     // when we are going to input the original price
