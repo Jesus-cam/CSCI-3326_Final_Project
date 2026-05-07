@@ -12,6 +12,7 @@ public class Tires extends Carparts{
 
     // it will print out the information
     public void partInfor() {
+        System.out.println("Type: Tire");
         System.out.println("Name: " + name);
         System.out.printf("Price: %.2f\n", updated_price());
         System.out.println("year: " + year);
