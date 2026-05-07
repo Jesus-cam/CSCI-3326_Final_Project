@@ -61,7 +61,7 @@ public class WarehouseMenu {
             }
         } while (choice != 6); //exit if 6 is pressed
     }
-            
+            //
     public Tires addTire(){
         System.out.print("Enter tire name: ");
         String name = input.nextLine();
