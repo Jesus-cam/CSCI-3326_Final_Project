@@ -15,9 +15,9 @@ public class Main {
         inventory.add(tire1);
         inventory.add(bat1);
         inventory.add(eng1);
-
+        //create menu object
         WarehouseMenu menu = new WarehouseMenu(inventory);
-        menu.start();
+        menu.start();//call menu start method
 
     }
 }
