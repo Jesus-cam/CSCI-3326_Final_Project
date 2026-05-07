@@ -16,11 +16,11 @@ public abstract class Carparts {
         this.year = year;
         this.model = model;
     }
-
+    //updates price based on the year
     public double updated_price() {
         int current_year = 2026;
         int yearsPassed = current_year - year;
-        for(int index = 0; index <= yearsPassed; index++) {
+        for(int index = 0; index < yearsPassed; index++) {
             price = price * .90;
         }
         return price;
@@ -49,7 +49,7 @@ public abstract class Carparts {
     // as a function
     // I overrided it in class engine so it also increase the price over time
 
-
+    //Forces classes to implement method
     public abstract void partInfor();
 
     

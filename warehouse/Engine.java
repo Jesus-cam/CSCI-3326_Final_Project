@@ -14,7 +14,7 @@ public class Engine extends Carparts {
             price = price * .90;
         }
 
-        if(year >= 1970) {
+        if(year <= 1970) {
             for(int index = 0; index <= yearsPassed; index++) {
                 price = price + (price * 0.10);
             }

@@ -2,17 +2,21 @@ package warehouse;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import warehouse.*;
 
 public class WarehouseMenu {
 
+    
     private Scanner input;
+    //array list that stores all car parts in inventory
     private ArrayList<Carparts> inventory;
+    //set to private to prevent other classes from directly modifying it
+
 
     // Constructor for warehouse menu
     public WarehouseMenu(ArrayList<Carparts> inventory) {
+        //creates scanner object for keyboard input
         this.input = new Scanner(System.in);
-        //to use the same inventory list
+        //to use the same inventory list and not have different ones
         this.inventory = inventory;
     }
     //Method to display menu options
@@ -35,9 +39,10 @@ public class WarehouseMenu {
 
             if (choice == 1) {
                 //create a variable for 'Tires' data type that holds a tire object
-                Tires tire = addTire();
+                Tires tire = addTire(); //calls addTire method
                 //add to 'inventory' array list the tire object
                 inventory.add(tire);
+            //Same principle is applied to the rest V
             }
             else if (choice == 2) {
                 Battery battery = addBattery();
@@ -48,7 +53,7 @@ public class WarehouseMenu {
                 inventory.add(engine);
             }
             else if (choice == 4) {
-                displayInventory();
+                displayInventory(); //call method to display inventory
             }
             else if (choice == 5) {
                 addBuyerInfo();
@@ -61,7 +66,7 @@ public class WarehouseMenu {
             }
         } while (choice != 6); //exit if 6 is pressed
     }
-            //
+    //method for creating and returnign a tire object
     public Tires addTire(){
         System.out.print("Enter tire name: ");
         String name = input.nextLine();
@@ -69,13 +74,14 @@ public class WarehouseMenu {
         double price = input.nextDouble();
         System.out.print("Enter year: ");
         int year = input.nextInt();
-        input.nextLine();
+        input.nextLine(); //clear buffer
         System.out.print("Enter model: ");
         String model = input.nextLine();
-
+        //create tire object using constructor
         Tires tire = new Tires(name, price, year, model);
         return tire;
     }
+    //method for creating and returning a battery object
     public Battery addBattery() {
         System.out.print("Enter battery name: ");
         String name = input.nextLine();
@@ -86,11 +92,11 @@ public class WarehouseMenu {
         input.nextLine();
         System.out.print("Enter model: ");
         String model = input.nextLine();
-
+        //create battery object using constructor
         Battery battery = new Battery(name, price, year, model);
         return battery;
     }
-    
+    //method for creating and returning an engine object
     public Engine addEngine() {
         System.out.print("Enter engine name: ");
         String name = input.nextLine();
@@ -101,14 +107,15 @@ public class WarehouseMenu {
         input.nextLine();
         System.out.print("Enter model: ");
         String model = input.nextLine();
-
+        //create engine object
         Engine engine = new Engine(name, price, year, model);
         return engine;
     }
+    //method for assigning buyer info to an inventory item 
     private void addBuyerInfo() {
         System.out.println("Enter an item # to assign a buyer:");
-        int itemNum = input.nextInt();
-        input.nextLine();
+        int itemNum = input.nextInt(); //read item number
+        input.nextLine(); //clear buffer
         //Get part according to item #
         Carparts part = inventory.get(itemNum - 1);
         //create new buyer object
@@ -126,15 +133,16 @@ public class WarehouseMenu {
         System.out.println("Buyer assigned to item # " +itemNum);
     }
     
-
+    //method that displays all inventory items
     public void displayInventory(){
         System.out.println("****** INVENTORY LIST ******");
+        //loop thorugh every item in the inventory 
         for (int i = 0; i < inventory.size(); i++) {
             System.out.println("---Item number: " + (i + 1) + "---");
 
             //Get item at postion i
             Carparts part = inventory.get(i);
-            //call method to display info
+            //call method to display info 
             part.partInfor();
 
             

@@ -1,8 +1,9 @@
 package warehouse;
 
 public class Battery extends Carparts{
-
+    //Constructor
     public Battery(String name, double price, int year, String model) {
+        //calls super class (parent) 
         super(name, price, year, model);
     }
 
